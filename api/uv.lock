@@ -99,14 +99,14 @@ wheels = [
 
 [[package]]
 name = "aiomysql"
-version = "0.2.0"
+version = "0.3.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pymysql" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/67/76/2c5b55e4406a1957ffdfd933a94c2517455291c97d2b81cec6813754791a/aiomysql-0.2.0.tar.gz", hash = "sha256:558b9c26d580d08b8c5fd1be23c5231ce3aeff2dadad989540fee740253deb67", size = 114706 }
+sdist = { url = "https://files.pythonhosted.org/packages/29/e0/302aeffe8d90853556f47f3106b89c16cc2ec2a4d269bdfd82e3f4ae12cc/aiomysql-0.3.2.tar.gz", hash = "sha256:72d15ef5cfc34c03468eb41e1b90adb9fd9347b0b589114bd23ead569a02ac1a", size = 108311 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/42/87/c982ee8b333c85b8ae16306387d703a1fcdfc81a2f3f15a24820ab1a512d/aiomysql-0.2.0-py3-none-any.whl", hash = "sha256:b7c26da0daf23a5ec5e0b133c03d20657276e4eae9b73e040b72787f6f6ade0a", size = 44215 },
+    { url = "https://files.pythonhosted.org/packages/4c/af/aae0153c3e28712adaf462328f6c7a3c196a1c1c27b491de4377dd3e6b52/aiomysql-0.3.2-py3-none-any.whl", hash = "sha256:c82c5ba04137d7afd5c693a258bea8ead2aad77101668044143a991e04632eb2", size = 71834 },
 ]
 
 [[package]]
@@ -1673,7 +1673,7 @@ vdb = [
     { name = "pgvector", specifier = "==0.2.5" },
     { name = "pymilvus", specifier = "~=2.5.0" },
     { name = "pymochow", specifier = "==2.2.9" },
-    { name = "pyobvector", specifier = "~=0.2.15" },
+    { name = "pyobvector", specifier = "~=0.2.17" },
     { name = "qdrant-client", specifier = "==1.9.0" },
     { name = "tablestore", specifier = "==6.2.0" },
     { name = "tcvectordb", specifier = "~=1.6.4" },
@@ -4846,7 +4846,7 @@ wheels = [
 
 [[package]]
 name = "pyobvector"
-version = "0.2.16"
+version = "0.2.17"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiomysql" },
@@ -4856,9 +4856,9 @@ dependencies = [
     { name = "sqlalchemy" },
     { name = "sqlglot" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b4/c1/a418b1e10627d3b9d54c7bed460d90bd44c9e9c20be801d6606e9fa3fe01/pyobvector-0.2.16.tar.gz", hash = "sha256:de44588e75de616dee7a9cc5d5c016aeb3390a90fe52f99d9b8ad2476294f6c2", size = 39602 }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/a5/88bd908c6fb9c42544f4d114cbb65eeba4424077c2b0a4255b9052a622c9/pyobvector-0.2.17.tar.gz", hash = "sha256:9af080bbd9593aff86bb3d65db2869c548fcbcededefa6efbe7ce66252815f8c", size = 42476 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/83/7b/c103cca858de87476db5e7c7f0f386b429c3057a7291155c70560b15d951/pyobvector-0.2.16-py3-none-any.whl", hash = "sha256:0710272e5c807a6d0bdeee96972cdc9fdca04fc4b40c2d1260b08ff8b79190ef", size = 52664 },
+    { url = "https://files.pythonhosted.org/packages/ce/89/293a0511300398ee526a82e9e3f935cc1cc700ed29a7d66688ce4f4af6f2/pyobvector-0.2.17-py3-none-any.whl", hash = "sha256:2fac85d7b02a34ef41806496b0db731b05979a7dceba41855e67c10a93a25bff", size = 57046 },
 ]
 
 [[package]]
