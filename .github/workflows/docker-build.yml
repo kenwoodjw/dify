@@ -15,6 +15,9 @@ concurrency:
 jobs:
   build-docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
     strategy:
       matrix:
         include:
@@ -44,5 +47,25 @@ jobs:
           context: "{{defaultContext}}:${{ matrix.context }}"
           file: "${{ matrix.file }}"
           platforms: ${{ matrix.platform }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          tags: dify/${{ matrix.service_name }}:${{ github.sha }}
+          load: ${{ matrix.platform == 'linux/amd64' }}
+          cache-from: type=gha,scope=docker-build-${{ matrix.service_name }}
+          cache-to: type=gha,mode=max,scope=docker-build-${{ matrix.service_name }}
+
+      - name: Scan ${{ matrix.service_name }} image with Trivy
+        if: matrix.platform == 'linux/amd64'
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: dify/${{ matrix.service_name }}:${{ github.sha }}
+          format: 'sarif'
+          output: trivy-${{ matrix.service_name }}.sarif
+          severity: 'CRITICAL,HIGH'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          exit-code: '1'
+
+      - name: Upload Trivy SARIF
+        if: always() && matrix.platform == 'linux/amd64'
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: trivy-${{ matrix.service_name }}.sarif
