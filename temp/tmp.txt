@@ -1,0 +1,2 @@
+export PGCOPYDB_TARGET_PGURI="postgres://sage_pg_admin:wIddic-wohfa7-quxzur@sage-postgresql.postgres.database.azure.com/migrate_test?sslmode=require"
+export PGCOPYDB_SOURCE_PGURI="postgres://dsc_pg_admin:sIcbyn-ryfheb-xahtu8@dsc-postgresql.postgres.database.azure.com/migrate_test?sslmode=require"
